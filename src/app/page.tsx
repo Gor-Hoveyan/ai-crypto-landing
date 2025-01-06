@@ -1,101 +1,318 @@
-import Image from "next/image";
+import Head from "next/head";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Head>
+        <title>CryptoSphere</title>
+        <meta
+          name="description"
+          content="Your Gateway to the Future of Cryptocurrency"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </Head>
+      <main className="bg-black text-white min-h-screen">
+        {/* Header */}
+        <header className="sticky top-0 z-50 bg-gradient-to-r from-black via-neonBlue/50 to-black backdrop-blur-md p-6 flex justify-between items-center border-b border-neonGreen transition-all duration-300">
+          <h1 className="text-4xl font-bold text-neonGreen hover:text-neonPurple transition duration-300 tracking-widest">
+            CryptoSphere
+          </h1>
+          <nav>
+            <ul className="flex space-x-8 text-lg font-medium">
+              <li>
+                <a
+                  href="#home"
+                  className="hover:text-neonPurple transition duration-300 transform hover:scale-105"
+                >
+                  Home
+                </a>
+              </li>
+              {/* Additional Navigation Items */}
+            </ul>
+          </nav>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Home Section */}
+        <section
+          id="home"
+          className="h-screen flex items-center justify-center text-center px-6 bg-black relative overflow-hidden"
+        >
+          <div className="animate-fade-in">
+            <h2 className="text-5xl sm:text-7xl font-bold text-neonGreen">
+              Step Into the Future
+            </h2>
+            <p className="text-lg sm:text-xl mt-6">
+              Join the revolution with CryptoSphere - the ultimate
+              cryptocurrency experience.
+            </p>
+            <div className="mt-8 flex space-x-6 justify-center">
+              <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+                Get Started
+              </button>
+              <button className="px-8 py-4 bg-gray-800 text-neonGreen font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonBlue shadow-lg shadow-neonBlue">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-neonGreen/20 to-transparent animate-gradient-move" />
+          <div className="absolute top-10 left-10 w-24 h-24 bg-neonBlue rounded-full blur-xl opacity-50 animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 bg-neonPurple rounded-full blur-xl opacity-50 animate-pulse"></div>
+        </section>
+
+        {/* About Section */}
+        <section
+          id="about"
+          className="py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black border-t-4 border-neonBlue"
+        >
+          <h3 className="text-4xl font-bold text-center text-neonBlue">
+            About Us
+          </h3>
+          <p className="mt-6 text-center max-w-4xl mx-auto text-lg">
+            CryptoSphere is a cutting-edge platform designed to bring you closer
+            to the ever-evolving world of cryptocurrency. From seamless
+            transactions to real-time analytics, we are your one-stop solution
+            for everything crypto.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+              Read More
+            </button>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 px-6 bg-black">
+          <h3 className="text-4xl font-bold text-center text-neonGreen">
+            Features
+          </h3>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {["Real-Time Analytics", "Secure Transactions", "Low Fees"].map(
+              (feature) => (
+                <div
+                  key={feature}
+                  className="p-8 bg-gray-800 rounded-xl shadow-xl border-2 border-neonBlue transition-transform hover:scale-105"
+                >
+                  <h4 className="text-2xl font-semibold text-neonBlue">
+                    {feature}
+                  </h4>
+                  <p className="mt-4 text-lg">
+                    {feature === "Real-Time Analytics"
+                      ? "Track the latest market trends with our state-of-the-art analytics tools."
+                      : feature === "Secure Transactions"
+                      ? "Your security is our priority. Experience the safest way to trade."
+                      : "Save money with our minimal transaction fees and transparent pricing."}
+                  </p>
+                  <button className="mt-6 px-6 py-3 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+                    Learn More
+                  </button>
+                </div>
+              )
+            )}
+          </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section
+          id="reviews"
+          className="py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black border-t-4 border-neonGreen"
+        >
+          <h3 className="text-4xl font-bold text-center text-neonBlue">
+            What Our Users Say
+          </h3>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {["Alex D.", "Maria K.", "John P."].map((user, index) => (
+              <div
+                key={user}
+                className="p-8 bg-gray-800 rounded-xl shadow-xl border-2 border-neonBlue transition-transform hover:scale-105"
+              >
+                <p className="italic">
+                  {index === 0
+                    ? '"CryptoSphere has changed the way I trade. It’s fast, reliable, and secure!"'
+                    : index === 1
+                    ? '"A must-have platform for any crypto enthusiast."'
+                    : '"Seamless transactions and amazing features!"'}
+                </p>
+                <h5 className="mt-6 font-bold text-neonGreen">{user}</h5>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+              Leave a Review
+            </button>
+          </div>
+        </section>
+
+        {/* Why Us Section */}
+        <section id="why-us" className="py-20 px-6 bg-black">
+          <h3 className="text-4xl font-bold text-center text-neonGreen">
+            Why Choose CryptoSphere?
+          </h3>
+          <ul className="mt-12 max-w-3xl mx-auto space-y-6 text-lg">
+            {[
+              "Cutting-edge technology tailored for speed and reliability.",
+              "A user-friendly interface for all experience levels.",
+              "24/7 customer support to assist you every step of the way.",
+            ].map((item) => (
+              <li key={item} className="flex items-center">
+                <span className="text-neonBlue text-xl mr-6">✓</span> {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 flex justify-center">
+            <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black border-t-4 border-neonPurple"
+        >
+          <h3 className="text-4xl font-bold text-center text-neonBlue">
+            Contact Us
+          </h3>
+          <p className="mt-6 text-center max-w-3xl mx-auto text-lg">
+            Have questions or need support? Reach out to our team and we’ll get
+            back to you as soon as possible.
+          </p>
+          <div className="mt-8 flex justify-center space-x-6">
+            <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+              Email Us
+            </button>
+            <button className="px-8 py-4 bg-neonPurple text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonPurple shadow-lg shadow-neonPurple">
+              Live Chat
+            </button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-black text-white py-8 mt-8 border-t-8 border-neonBlue">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+              {/* About Section */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-neonGreen">
+                  About Us
+                </h3>
+                <p className="text-sm text-gray-400">
+                  We are a creative team passionate about technology, design,
+                  and making the web a better place.
+                </p>
+              </div>
+
+              {/* Links Section */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-neonBlue">
+                  Quick Links
+                </h3>
+                <ul className="text-sm text-gray-400">
+                  <li>
+                    <a
+                      href="/"
+                      className="hover:text-neonGreen transition-colors"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about"
+                      className="hover:text-neonGreen transition-colors"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services"
+                      className="hover:text-neonGreen transition-colors"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contact"
+                      className="hover:text-neonGreen transition-colors"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Social Media Section */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-neonPurple">
+                  Follow Us
+                </h3>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://facebook.com"
+                    className="text-gray-400 hover:text-neonGreen transition-colors"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href="https://twitter.com"
+                    className="text-gray-400 hover:text-neonBlue transition-colors"
+                  >
+                    <FaTwitter />
+                  </a>
+                  <a
+                    href="https://instagram.com"
+                    className="text-gray-400 hover:text-neonPurple transition-colors"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    className="text-gray-400 hover:text-neonGreen transition-colors"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </div>
+              </div>
+
+              {/* Newsletter Section */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-neonGreen">
+                  Newsletter
+                </h3>
+                <p className="text-sm text-gray-400">
+                  Subscribe to our newsletter for updates and news.
+                </p>
+                <form className="flex items-center">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="px-4 py-2 rounded-l-md text-black focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-neonGreen text-white rounded-r-md hover:bg-neonBlue transition-all"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="text-center py-6 text-sm text-gray-400 mt-8">
+            <p>© 2025 Your Company. All rights reserved.</p>
+          </div>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
-}
+};
+
+export default Home;
