@@ -19,22 +19,47 @@ const Home = () => {
       <main className="bg-black text-white min-h-screen">
         {/* Header */}
         <header className="sticky top-0 z-50 bg-gradient-to-r from-black via-neonBlue/50 to-black backdrop-blur-md p-6 flex justify-between items-center border-b border-neonGreen transition-all duration-300">
-          <h1 className="text-4xl font-bold text-neonGreen hover:text-neonPurple transition duration-300 tracking-widest">
-            CryptoSphere
-          </h1>
-          <nav>
-            <ul className="flex space-x-8 text-lg font-medium">
-              <li>
-                <a
-                  href="#home"
-                  className="hover:text-neonPurple transition duration-300 transform hover:scale-105"
-                >
-                  Home
-                </a>
-              </li>
-              {/* Additional Navigation Items */}
-            </ul>
-          </nav>
+          <div className="container mx-auto px-6 flex justify-between items-center">
+            <div className="text-2xl font-bold text-neonGreen">
+              Your Company
+            </div>
+            <nav>
+              <ul className="flex space-x-8">
+                <li>
+                  <a
+                    href="#home"
+                    className="hover:text-neonGreen transition-colors"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className="hover:text-neonBlue transition-colors"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-neonPurple transition-colors"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-neonGreen transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
 
         {/* Home Section */}
