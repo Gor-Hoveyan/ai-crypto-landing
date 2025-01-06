@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -21,41 +22,41 @@ const Home = () => {
         <header className="sticky top-0 z-50 bg-gradient-to-r from-black via-neonBlue/50 to-black backdrop-blur-md p-6 flex justify-between items-center border-b border-neonGreen transition-all duration-300">
           <div className="container mx-auto px-6 flex justify-between items-center">
             <div className="text-2xl font-bold text-neonGreen">
-              Your Company
+              <Link href="/">Your Company</Link>
             </div>
             <nav>
               <ul className="flex space-x-8">
                 <li>
-                  <a
+                  <Link
                     href="#home"
                     className="hover:text-neonGreen transition-colors"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#about"
                     className="hover:text-neonBlue transition-colors"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#features"
+                  <Link
+                    href="#services"
                     className="hover:text-neonPurple transition-colors"
                   >
-                    Features
-                  </a>
+                    Services
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#contact"
                     className="hover:text-neonGreen transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -76,10 +77,16 @@ const Home = () => {
               cryptocurrency experience.
             </p>
             <div className="mt-8 flex space-x-6 justify-center">
-              <button className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonGreen shadow-lg shadow-neonGreen">
+              <button
+                className="px-8 py-4 bg-neonGreen text-black font-semibold rounded-full border-2 border-neonGreen shadow-lg shadow-neonGreen transition duration-300 transform hover:bg-neonBlue hover:scale-105 hover:shadow-neonBlue"
+                aria-label="Get started with CryptoSphere"
+              >
                 Get Started
               </button>
-              <button className="px-8 py-4 bg-gray-800 text-neonGreen font-semibold rounded-full hover:bg-neonBlue transition transform hover:scale-105 border-2 border-neonBlue shadow-lg shadow-neonBlue">
+              <button
+                className="px-8 py-4 bg-gray-800 text-neonGreen font-semibold rounded-full border-2 border-neonBlue shadow-lg shadow-neonBlue transition duration-300 transform hover:bg-neonBlue hover:scale-105 hover:shadow-neonPurple"
+                aria-label="Learn more about CryptoSphere"
+              >
                 Learn More
               </button>
             </div>
