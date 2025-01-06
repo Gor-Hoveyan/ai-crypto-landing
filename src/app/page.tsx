@@ -247,36 +247,36 @@ const Home = () => {
                 </h3>
                 <ul className="text-sm text-gray-400">
                   <li>
-                    <a
+                    <Link
                       href="/"
                       className="hover:text-neonGreen transition-colors"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/about"
                       className="hover:text-neonGreen transition-colors"
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/services"
                       className="hover:text-neonGreen transition-colors"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/contact"
                       className="hover:text-neonGreen transition-colors"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
